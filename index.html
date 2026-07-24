@@ -6,61 +6,65 @@
 <title>Phoenix Ace · Academia de Volleyball en Moravia, San José</title>
 <meta name="description" content="Academia de volleyball Phoenix Ace en Moravia, San José. Formación deportiva para niñas, niños y jóvenes: Iniciación, U13, U15 y U17. Calificación 5.0 en Google.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --fucsia:#E31C5F;
-  --fucsia-suave:#fdeef3;
   --turquesa:#8DCDEA;
-  --turquesa-suave:#eef7fc;
-  --navy:#12294a;
-  --tinta:#1c2b40;
-  --gris:#5b6b80;
+  --negro:#000000;
+  --gris-panel:#0d0d0d;
+  --gris-borde:#232323;
+  --gris-txt:#9aa0a6;
   --blanco:#ffffff;
-  --borde:#e4edf4;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Figtree',sans-serif;background:var(--blanco);color:var(--tinta);line-height:1.65;overflow-x:hidden}
-h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;color:var(--navy);line-height:1.1}
+body{font-family:'Outfit',sans-serif;background:var(--negro);color:var(--blanco);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
+.rajdhani{font-family:'Rajdhani',sans-serif}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 
 /* ===== NAV ===== */
-nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--borde)}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1140px;margin:0 auto}
-.logo{display:flex;align-items:center;gap:12px;font-family:'Bricolage Grotesque';font-weight:800;font-size:1.1rem;color:var(--navy)}
-.logo .mark{width:40px;height:40px;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-size:1.15rem}
+nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(0,0,0,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--gris-borde)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1160px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px;font-family:'Anton';font-size:1.1rem}
+.logo .mark{width:42px;height:42px;border-radius:50%;background:var(--turquesa);display:grid;place-items:center;font-size:1.2rem;border:2px solid var(--fucsia)}
 .logo em{color:var(--fucsia);font-style:normal}
-.nav-links{display:flex;gap:30px;font-weight:600;font-size:.92rem;color:var(--gris)}
+.nav-links{display:flex;gap:30px;font-weight:600;font-size:.88rem;font-family:'Rajdhani';letter-spacing:.06em;text-transform:uppercase;color:var(--gris-txt)}
 .nav-links a{transition:color .2s}
-.nav-links a:hover{color:var(--fucsia)}
-.btn{display:inline-block;background:var(--fucsia);color:#fff;padding:13px 30px;border-radius:8px;font-weight:700;font-size:.95rem;transition:background .2s,transform .2s,box-shadow .2s}
-.btn:hover{background:#c4104d;transform:translateY(-1px);box-shadow:0 10px 26px rgba(227,28,95,.25)}
-.btn.linea{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}
-.btn.linea:hover{background:var(--navy);color:#fff;box-shadow:none}
-.nav-cta{padding:10px 22px;font-size:.88rem}
+.nav-links a:hover{color:var(--turquesa)}
+.btn{display:inline-block;background:var(--fucsia);color:#fff;padding:13px 30px;border-radius:4px;font-weight:700;font-size:.9rem;font-family:'Rajdhani';letter-spacing:.05em;text-transform:uppercase;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{background:#ff2670;transform:translateY(-2px);box-shadow:0 10px 30px rgba(227,28,95,.35)}
+.btn.turq{background:transparent;color:var(--turquesa);border:1.5px solid var(--turquesa)}
+.btn.turq:hover{background:var(--turquesa);color:#000}
+.nav-cta{padding:10px 22px;font-size:.82rem}
 
 /* ===== HERO ===== */
-header{padding:150px 0 90px;background:linear-gradient(180deg,var(--turquesa-suave) 0%,var(--blanco) 85%);position:relative;overflow:hidden}
+header{padding:150px 0 100px;position:relative;background:
+  radial-gradient(ellipse 900px 500px at 85% 15%, rgba(141,205,234,.12), transparent 60%),
+  radial-gradient(ellipse 700px 500px at 10% 90%, rgba(227,28,95,.14), transparent 60%),
+  #000}
 .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--borde);color:var(--navy);padding:8px 18px;border-radius:50px;font-size:.82rem;font-weight:600;margin-bottom:26px;box-shadow:0 2px 10px rgba(18,41,74,.06)}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;background:var(--gris-panel);border:1px solid var(--gris-borde);color:var(--turquesa);padding:9px 18px;border-radius:4px;font-family:'Rajdhani';font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
 .eyebrow b{color:var(--fucsia)}
-header h1{font-size:clamp(2.6rem,5.2vw,4.2rem);font-weight:800;letter-spacing:-.02em}
-header h1 span{color:var(--fucsia)}
-header .lead{margin:24px 0 34px;font-size:1.14rem;color:var(--gris);max-width:480px;font-weight:300}
+header h1{font-size:clamp(2.6rem,5.4vw,4.4rem)}
+header h1 span{color:var(--turquesa)}
+header h1 em{color:var(--fucsia);font-style:normal}
+header .lead{margin:26px 0 36px;font-size:1.1rem;color:var(--gris-txt);max-width:480px;font-weight:300}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.trust{display:flex;align-items:center;gap:12px;margin-top:38px;color:var(--gris);font-size:.9rem}
-.trust .stars{color:#f5a623;letter-spacing:2px}
+.trust{display:flex;align-items:center;gap:12px;margin-top:40px;color:var(--gris-txt);font-size:.9rem;font-family:'Rajdhani'}
+.trust .stars{color:var(--fucsia);letter-spacing:2px;font-size:1.1rem}
 
-/* Bola elegante: flota suave y rota lento */
+/* Bola deportiva con halo */
 .hero-visual{position:relative;height:460px;display:grid;place-items:center}
-.ring{position:absolute;border-radius:50%;border:1.5px solid rgba(18,41,74,.1)}
-.r1{width:380px;height:380px}
-.r2{width:300px;height:300px;border-color:rgba(227,28,95,.14)}
-.ball-wrap{animation:float 5.5s ease-in-out infinite;filter:drop-shadow(0 30px 30px rgba(18,41,74,.18))}
-.ball{width:230px;height:230px;animation:spin 22s linear infinite}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(141,205,234,.18)}
+.r1{width:390px;height:390px}
+.r2{width:310px;height:310px;border-color:rgba(227,28,95,.2)}
+.glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(141,205,234,.25),transparent 70%);filter:blur(10px)}
+.ball-wrap{position:relative;animation:float 5.5s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(141,205,234,.3))}
+.ball{width:230px;height:230px;animation:spin 20s linear infinite}
 @keyframes float{0%,100%{transform:translateY(-14px)}50%{transform:translateY(16px)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion: reduce){
@@ -69,83 +73,82 @@ header .lead{margin:24px 0 34px;font-size:1.14rem;color:var(--gris);max-width:48
 }
 
 /* ===== SECCIONES ===== */
-section{padding:96px 0}
+section{padding:100px 0}
 .sec-head{max-width:640px;margin-bottom:56px}
 .sec-head.centro{margin-inline:auto;text-align:center}
-.tag{color:var(--fucsia);font-weight:700;letter-spacing:.18em;text-transform:uppercase;font-size:.76rem}
-.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;margin-top:12px;letter-spacing:-.01em}
-.sec-head p{margin-top:16px;color:var(--gris);font-weight:300;font-size:1.05rem}
+.tag{color:var(--fucsia);font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;font-family:'Rajdhani'}
+.sec-head h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-top:12px}
+.sec-head p{margin-top:16px;color:var(--gris-txt);font-weight:300;font-size:1.05rem}
 
 /* Programas */
-#programas{background:var(--blanco)}
-.grid-prog{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:24px}
-.card{background:#fff;border:1px solid var(--borde);border-radius:16px;padding:34px 30px;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(18,41,74,.1)}
-.card .icono{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;margin-bottom:18px}
-.i-t{background:var(--turquesa-suave)}
-.i-f{background:var(--fucsia-suave)}
-.card h3{font-size:1.25rem;font-weight:700}
-.card .edad{color:var(--fucsia);font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase}
-.card p{margin-top:10px;color:var(--gris);font-weight:300;font-size:.95rem}
+#programas{background:#000;border-top:1px solid var(--gris-borde)}
+.grid-prog{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:22px}
+.card{background:var(--gris-panel);border:1px solid var(--gris-borde);border-radius:10px;padding:32px 28px;transition:transform .25s,border-color .25s;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--turquesa),var(--fucsia))}
+.card:hover{transform:translateY(-5px);border-color:var(--turquesa)}
+.card .icono{width:46px;height:46px;border-radius:8px;display:grid;place-items:center;font-size:1.25rem;margin-bottom:18px;background:#000;border:1px solid var(--gris-borde)}
+.card h3{font-size:1.2rem}
+.card .edad{color:var(--fucsia);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-family:'Rajdhani'}
+.card p{margin-top:10px;color:var(--gris-txt);font-weight:300;font-size:.94rem}
 
 /* Horarios */
-#horarios{background:var(--turquesa-suave)}
+#horarios{background:var(--gris-panel);border-top:1px solid var(--gris-borde);border-bottom:1px solid var(--gris-borde)}
 .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:30px}
-.tab{background:#fff;border:1px solid var(--borde);color:var(--gris);padding:10px 22px;border-radius:8px;font-family:'Figtree';font-weight:600;font-size:.9rem;cursor:pointer;transition:.2s}
-.tab:hover{border-color:var(--navy);color:var(--navy)}
-.tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.tab{background:#000;border:1px solid var(--gris-borde);color:var(--gris-txt);padding:10px 22px;border-radius:4px;font-family:'Rajdhani';font-weight:600;font-size:.92rem;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--turquesa);color:var(--turquesa)}
+.tab.active{background:var(--fucsia);border-color:var(--fucsia);color:#fff}
 .day-panel{display:none;animation:fadeUp .35s ease}
 .day-panel.show{display:block}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.slot{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;border:1px solid var(--borde);border-radius:12px;padding:20px 26px;margin-bottom:12px;max-width:660px}
-.slot b{font-weight:700;color:var(--navy)}
-.slot small{display:block;color:var(--gris);font-weight:400}
-.slot .hora{color:var(--fucsia);font-weight:700;white-space:nowrap;font-size:.95rem}
-.nota{color:var(--gris);font-size:.88rem;margin-top:18px;max-width:660px}
+.slot{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#000;border:1px solid var(--gris-borde);border-left:3px solid var(--turquesa);border-radius:6px;padding:20px 26px;margin-bottom:12px;max-width:660px}
+.slot b{font-weight:700;font-family:'Rajdhani';font-size:1.05rem;letter-spacing:.02em}
+.slot small{display:block;color:var(--gris-txt);font-weight:400;font-family:'Outfit'}
+.slot .hora{color:var(--fucsia);font-weight:700;white-space:nowrap;font-family:'Rajdhani';font-size:1rem}
+.nota{color:var(--gris-txt);font-size:.88rem;margin-top:18px;max-width:660px}
 
 /* Galería */
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.gal .ph{aspect-ratio:4/3;border-radius:14px;overflow:hidden;position:relative;display:grid;place-items:center;color:#fff;font-weight:600;font-size:.9rem;text-align:center;padding:12px;transition:transform .25s}
-.gal .ph:hover{transform:scale(1.02)}
+#galeria{background:#000}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal .ph{aspect-ratio:4/3;border-radius:8px;overflow:hidden;position:relative;display:grid;place-items:center;color:#fff;font-weight:600;font-size:.88rem;font-family:'Rajdhani';text-transform:uppercase;letter-spacing:.05em;text-align:center;padding:12px;border:1px solid var(--gris-borde);transition:transform .25s,border-color .25s}
+.gal .ph:hover{transform:scale(1.02);border-color:var(--turquesa)}
 .gal .ph.alta{grid-row:span 2;aspect-ratio:auto}
-.g1{background:linear-gradient(160deg,#12294a,#2a4a7a)}
-.g2{background:linear-gradient(160deg,#8DCDEA,#5ba3c9)}
-.g3{background:linear-gradient(160deg,#E31C5F,#a3134a)}
-.g4{background:linear-gradient(160deg,#5ba3c9,#12294a)}
-.g5{background:linear-gradient(160deg,#a3134a,#12294a)}
-.gal-note{margin-top:16px;font-size:.85rem;color:var(--gris)}
+.g1{background:linear-gradient(160deg,#0d0d0d,#1a3a52)}
+.g2{background:linear-gradient(160deg,#0d0d0d,#5ba3c9)}
+.g3{background:linear-gradient(160deg,#0d0d0d,#a3134a)}
+.g4{background:linear-gradient(160deg,#0d0d0d,#3b7fa0)}
+.g5{background:linear-gradient(160deg,#0d0d0d,#7a1140)}
+.gal-note{margin-top:16px;font-size:.85rem;color:var(--gris-txt)}
 
 /* Testimonios */
-#opiniones{background:var(--navy)}
-#opiniones .tag{color:var(--turquesa)}
-#opiniones h2{color:#fff}
-#opiniones .sec-head p{color:rgba(255,255,255,.7)}
+#opiniones{background:var(--gris-panel);border-top:1px solid var(--gris-borde)}
 .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
-.testi{background:rgba(255,255,255,.06);border:1px solid rgba(141,205,234,.2);border-radius:16px;padding:30px}
-.testi .stars{color:#f5c542;letter-spacing:2px;margin-bottom:14px}
-.testi p{color:rgba(255,255,255,.85);font-weight:300;font-style:italic;font-size:.98rem}
-.testi footer{margin-top:16px;color:var(--turquesa);font-weight:600;font-size:.88rem;border:0;padding:0}
+.testi{background:#000;border:1px solid var(--gris-borde);border-radius:10px;padding:30px;transition:border-color .2s}
+.testi:hover{border-color:var(--fucsia)}
+.testi .stars{color:var(--fucsia);letter-spacing:2px;margin-bottom:14px;font-size:1.1rem}
+.testi p{color:#d5d8db;font-weight:300;font-style:italic;font-size:.98rem}
+.testi footer{margin-top:16px;color:var(--turquesa);font-weight:600;font-size:.85rem;font-family:'Rajdhani';letter-spacing:.04em;text-transform:uppercase;border:0;padding:0}
 
 /* Matrícula */
+#matricula{background:#000}
 .matri{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:860px;margin:0 auto}
-.matri .card h3{color:var(--navy)}
-.precio{font-family:'Bricolage Grotesque';font-weight:800;font-size:2.8rem;color:var(--fucsia);margin:8px 0}
+.matri .card h3{color:var(--turquesa)}
+.precio{font-family:'Anton';font-size:2.7rem;color:var(--fucsia);margin:10px 0}
 .matri ul{list-style:none;margin-top:14px}
-.matri li{padding:8px 0;color:var(--gris);font-size:.95rem;border-bottom:1px dashed var(--borde)}
-.matri li::before{content:"✓ ";color:var(--fucsia);font-weight:700}
+.matri li{padding:9px 0;color:var(--gris-txt);font-size:.94rem;border-bottom:1px dashed var(--gris-borde)}
+.matri li::before{content:"▸ ";color:var(--turquesa);font-weight:700}
 
 /* Contacto */
-#contacto{background:linear-gradient(160deg,var(--fucsia-suave),var(--turquesa-suave));text-align:center}
-#contacto .lead{max-width:540px;margin:16px auto 34px;color:var(--gris);font-weight:300}
+#contacto{background:linear-gradient(160deg,#1a0a12,#081824);text-align:center;border-top:1px solid var(--gris-borde)}
+#contacto .lead{max-width:540px;margin:16px auto 34px;color:var(--gris-txt);font-weight:300}
 .contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.chip{background:#fff;border:1px solid var(--borde);padding:13px 24px;border-radius:10px;font-weight:600;font-size:.93rem;color:var(--navy);transition:.2s;box-shadow:0 2px 10px rgba(18,41,74,.05)}
-.chip:hover{border-color:var(--fucsia);color:var(--fucsia)}
-.ubi{margin-top:30px;color:var(--gris);font-size:.92rem}
+.chip{background:#000;border:1px solid var(--gris-borde);padding:13px 24px;border-radius:6px;font-weight:600;font-size:.88rem;font-family:'Rajdhani';letter-spacing:.03em;text-transform:uppercase;color:var(--blanco);transition:.2s}
+.chip:hover{border-color:var(--turquesa);color:var(--turquesa)}
+.ubi{margin-top:30px;color:var(--gris-txt);font-size:.9rem}
 
-footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris);border-top:1px solid var(--borde)}
+footer.pie{padding:34px 24px;text-align:center;font-size:.82rem;color:var(--gris-txt);border-top:1px solid var(--gris-borde);font-family:'Rajdhani';letter-spacing:.03em}
 
 /* WhatsApp flotante */
-.wa-float{position:fixed;bottom:22px;right:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25);transition:transform .2s}
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:90;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.5);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:29px;height:29px;fill:#fff}
 
@@ -186,18 +189,19 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
   <div class="wrap hero">
     <div>
       <span class="eyebrow">🏐 Academia de volleyball en Moravia · <b>5.0 ★ en Google</b></span>
-      <h1>Donde el talento joven <span>aprende a volar</span></h1>
+      <h1>Donde el talento joven <span>aprende</span> a <em>volar</em></h1>
       <p class="lead">Formamos jugadoras y jugadores desde los primeros fundamentos hasta la competencia U17, con entrenamiento técnico, disciplina y un ambiente que se siente como familia.</p>
       <div class="hero-actions">
         <a class="btn" href="https://wa.me/50688533555" target="_blank" rel="noopener">Coordinar clase de prueba</a>
-        <a class="btn linea" href="#horarios">Ver horarios</a>
+        <a class="btn turq" href="#horarios">Ver horarios</a>
       </div>
       <div class="trust">
         <span class="stars">★★★★★</span>
-        <span><b>5.0</b> · 19 reseñas en Google · Familias de Moravia y alrededores</span>
+        <span>5.0 · 19 reseñas en Google · Familias de Moravia y alrededores</span>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
+      <span class="glow"></span>
       <span class="ring r1"></span>
       <span class="ring r2"></span>
       <div class="ball-wrap">
@@ -209,7 +213,7 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
             <path d="M30 210 Q 45 90 130 -10" stroke="#E31C5F"/>
             <path d="M210 130 Q 110 150 60 215" stroke="#8DCDEA"/>
           </g>
-          <g clip-path="url(#c)" fill="none" stroke="#12294a" stroke-width="3.5">
+          <g clip-path="url(#c)" fill="none" stroke="#000000" stroke-width="3.5">
             <path d="M-10 88 Q 100 28 210 88"/>
             <path d="M-10 52 Q 100 -8 210 52"/>
             <path d="M48 210 Q 63 90 148 -10"/>
@@ -217,7 +221,7 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
             <path d="M210 148 Q 110 168 78 215"/>
             <path d="M210 112 Q 110 132 42 215"/>
           </g>
-          <circle cx="100" cy="100" r="96" fill="none" stroke="#12294a" stroke-width="5"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#000000" stroke-width="5"/>
         </svg>
       </div>
     </div>
@@ -232,12 +236,12 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
       <p>Cada grupo entrena con objetivos adaptados a su edad y nivel: técnica, preparación física y valores que trascienden la cancha.</p>
     </div>
     <div class="grid-prog">
-      <div class="card reveal"><div class="icono i-t">🌱</div><span class="edad">Primeros pasos</span><h3>Iniciación</h3><p>Fundamentos desde cero: golpe de dedos, antebrazos, saque y coordinación general, en un ambiente paciente y motivador.</p></div>
-      <div class="card reveal"><div class="icono i-f">⚡</div><span class="edad">Sub-13</span><h3>U13</h3><p>Consolidación técnica y primeros conceptos de juego en equipo, con dinámicas competitivas apropiadas para la edad.</p></div>
-      <div class="card reveal"><div class="icono i-t">🎯</div><span class="edad">Sub-15</span><h3>U15</h3><p>Perfeccionamiento por posición, preparación física específica y experiencia real de competencia.</p></div>
-      <div class="card reveal"><div class="icono i-f">🔥</div><span class="edad">Sub-17</span><h3>U17</h3><p>Táctica avanzada, trabajo físico estructurado y proyección hacia el volleyball competitivo.</p></div>
-      <div class="card reveal"><div class="icono i-t">📐</div><span class="edad">Refuerzo</span><h3>Nivelación</h3><p>Sesiones para poner al día la técnica de quienes se integran a un grupo con más experiencia.</p></div>
-      <div class="card reveal"><div class="icono i-f">🏆</div><span class="edad">Sábados</span><h3>Clínicas</h3><p>Talleres intensivos de habilidades específicas: saque, remate, recepción y bloqueo.</p></div>
+      <div class="card reveal"><div class="icono">🌱</div><span class="edad">Primeros pasos</span><h3>Iniciación</h3><p>Fundamentos desde cero: golpe de dedos, antebrazos, saque y coordinación general, en un ambiente paciente y motivador.</p></div>
+      <div class="card reveal"><div class="icono">⚡</div><span class="edad">Sub-13</span><h3>U13</h3><p>Consolidación técnica y primeros conceptos de juego en equipo, con dinámicas competitivas apropiadas para la edad.</p></div>
+      <div class="card reveal"><div class="icono">🎯</div><span class="edad">Sub-15</span><h3>U15</h3><p>Perfeccionamiento por posición, preparación física específica y experiencia real de competencia.</p></div>
+      <div class="card reveal"><div class="icono">🔥</div><span class="edad">Sub-17</span><h3>U17</h3><p>Táctica avanzada, trabajo físico estructurado y proyección hacia el volleyball competitivo.</p></div>
+      <div class="card reveal"><div class="icono">📐</div><span class="edad">Refuerzo</span><h3>Nivelación</h3><p>Sesiones para poner al día la técnica de quienes se integran a un grupo con más experiencia.</p></div>
+      <div class="card reveal"><div class="icono">🏆</div><span class="edad">Sábados</span><h3>Clínicas</h3><p>Talleres intensivos de habilidades específicas: saque, remate, recepción y bloqueo.</p></div>
     </div>
   </div>
 </section>
@@ -335,7 +339,7 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
       </div>
       <div class="card reveal">
         <h3>Forma de pago</h3>
-        <div class="precio" style="font-size:2rem">SINPE Móvil</div>
+        <div class="precio" style="font-size:1.9rem">SINPE Móvil</div>
         <ul>
           <li><b>8853-3555</b> · a nombre de Evelyn Vargas</li>
           <li>Enviá el comprobante por WhatsApp</li>
@@ -349,7 +353,7 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.85rem;color:var(--gris
 <section id="contacto">
   <div class="wrap reveal">
     <span class="tag">Contacto</span>
-    <h2 style="font-size:clamp(1.9rem,3.6vw,2.7rem);margin-top:12px">Coordiná tu primera clase</h2>
+    <h2 style="font-size:clamp(1.9rem,3.6vw,2.8rem);margin-top:12px">Coordiná tu primera clase</h2>
     <p class="lead">Escribinos por WhatsApp y te contamos cuál categoría es la ideal según edad y experiencia.</p>
     <div class="contact-row">
       <a class="chip" href="https://wa.me/50688533555" target="_blank" rel="noopener">💬 WhatsApp 8853-3555</a>
