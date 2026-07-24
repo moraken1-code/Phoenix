@@ -77,7 +77,7 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@600;700;800&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --fucsia:#E31C5F;
@@ -92,6 +92,7 @@
 html{scroll-behavior:smooth}
 body{font-family:'Outfit',sans-serif;background:var(--negro);color:var(--blanco);line-height:1.6;overflow-x:hidden}
 h1,h2,h3{font-family:'Anton',sans-serif;letter-spacing:.01em;text-transform:uppercase;line-height:1.05}
+.serif{font-family:'Playfair Display',serif}
 .rajdhani{font-family:'Rajdhani',sans-serif}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
@@ -112,35 +113,34 @@ nav{position:fixed;inset:0 0 auto 0;z-index:100;background:rgba(0,0,0,.85);backd
 .btn.turq:hover{background:var(--turquesa);color:#000}
 .nav-cta{padding:10px 22px;font-size:.82rem}
 
-/* ===== HERO ===== */
-header{padding:150px 0 100px;position:relative;background:
-  radial-gradient(ellipse 900px 500px at 85% 15%, rgba(141,205,234,.12), transparent 60%),
-  radial-gradient(ellipse 700px 500px at 10% 90%, rgba(227,28,95,.14), transparent 60%),
-  #000}
-.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;background:var(--gris-panel);border:1px solid var(--gris-borde);color:var(--turquesa);padding:9px 18px;border-radius:4px;font-family:'Rajdhani';font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:28px}
-.eyebrow b{color:var(--fucsia)}
-header h1{font-size:clamp(2.6rem,5.4vw,4.4rem)}
-header h1 span{color:var(--turquesa)}
-header h1 em{color:var(--fucsia);font-style:normal}
-header .lead{margin:26px 0 36px;font-size:1.1rem;color:var(--gris-txt);max-width:480px;font-weight:300}
+/* ===== HERO CINEMATOGRÁFICO ===== */
+header{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.85) contrast(1.05)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.75) 32%, rgba(0,0,0,.35) 58%, rgba(0,0,0,.15) 100%),
+  linear-gradient(0deg, rgba(0,0,0,.9) 0%, transparent 25%, transparent 75%, rgba(0,0,0,.6) 100%)}
+.hero-in{position:relative;z-index:2;padding:150px 0 90px;width:100%}
+.badge-shield{display:inline-flex;align-items:center;gap:14px;margin-bottom:30px}
+.shield{width:56px;height:64px;position:relative}
+.shield svg{width:100%;height:100%}
+.badge-txt{font-family:'Rajdhani';font-size:.78rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--turquesa);border-bottom:1px solid rgba(141,205,234,.3);padding-bottom:4px}
+.ribbon{display:inline-block;background:var(--negro);border:1px solid var(--turquesa);color:var(--turquesa);padding:8px 22px;font-family:'Rajdhani';font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:24px;clip-path:polygon(0 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+header h1{font-family:'Playfair Display',serif;font-weight:800;text-transform:none;font-size:clamp(2.6rem,6vw,4.6rem);letter-spacing:-.01em;max-width:680px}
+header h1 em{font-style:italic;color:var(--turquesa)}
+.kicker{font-family:'Anton';text-transform:uppercase;font-size:clamp(1.1rem,2.2vw,1.6rem);letter-spacing:.06em;color:var(--fucsia);margin-top:14px;max-width:640px}
+.checklist{list-style:none;margin:34px 0 40px;max-width:460px}
+.checklist li{display:flex;align-items:center;gap:12px;padding:9px 0;font-family:'Rajdhani';font-size:1.05rem;font-weight:600;color:#e8e8e8;border-bottom:1px solid rgba(255,255,255,.08)}
+.checklist li .ck{color:var(--fucsia);font-weight:900}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.trust{display:flex;align-items:center;gap:12px;margin-top:40px;color:var(--gris-txt);font-size:.9rem;font-family:'Rajdhani'}
-.trust .stars{color:var(--fucsia);letter-spacing:2px;font-size:1.1rem}
 
-/* Bola deportiva con halo */
-.hero-visual{position:relative;height:460px;display:grid;place-items:center}
-.ring{position:absolute;border-radius:50%;border:1px solid rgba(141,205,234,.18)}
-.r1{width:390px;height:390px}
-.r2{width:310px;height:310px;border-color:rgba(227,28,95,.2)}
-.glow{position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(141,205,234,.25),transparent 70%);filter:blur(10px)}
-.ball-wrap{position:relative;animation:float 5.5s ease-in-out infinite;filter:drop-shadow(0 0 40px rgba(141,205,234,.3))}
-.ball{width:230px;height:230px;animation:spin 20s linear infinite}
-@keyframes float{0%,100%{transform:translateY(-14px)}50%{transform:translateY(16px)}}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion: reduce){
-  .ball-wrap,.ball{animation:none}
-  .reveal{opacity:1!important;transform:none!important;transition:none!important}
+/* Bola pequeña flotando de acento */
+.mini-ball{position:absolute;width:70px;height:70px;top:18%;right:8%;animation:floatMini 5s ease-in-out infinite;opacity:.9;z-index:2;filter:drop-shadow(0 10px 20px rgba(0,0,0,.5))}
+@keyframes floatMini{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-24px) rotate(15deg)}}
+@media (prefers-reduced-motion: reduce){.mini-ball{animation:none}}
+@media(max-width:900px){
+  .hero-bg img{object-position:65% 15%}
+  .mini-ball{display:none}
 }
 
 /* ===== SECCIONES ===== */
@@ -257,44 +257,48 @@ footer.pie{padding:34px 24px;text-align:center;font-size:.82rem;color:var(--gris
 </nav>
 
 <header id="inicio">
-  <div class="wrap hero">
-    <div>
-      <span class="eyebrow">🏐 5.0 ★ en Google · 19 reseñas</span>
-      <h1>Academia de <span>Volleyball</span> en <em>Moravia</em></h1>
-      <p class="lead"><b style="color:#fff;font-weight:600">Donde el talento joven aprende a volar.</b> Formamos jugadoras y jugadores desde los primeros fundamentos hasta la competencia U17, con entrenamiento técnico, disciplina y un ambiente que se siente como familia.</p>
-      <div class="hero-actions">
-        <a class="btn" href="https://wa.me/50688533555" target="_blank" rel="noopener">Coordinar clase de prueba</a>
-        <a class="btn turq" href="#horarios">Ver horarios</a>
-      </div>
-      <div class="trust">
-        <span class="stars">★★★★★</span>
-        <span>5.0 · 19 reseñas en Google · Familias de Moravia y alrededores</span>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <span class="glow"></span>
-      <span class="ring r1"></span>
-      <span class="ring r2"></span>
-      <div class="ball-wrap">
-        <svg class="ball" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <defs><clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath></defs>
-          <circle cx="100" cy="100" r="96" fill="#ffffff"/>
-          <g clip-path="url(#c)" fill="none" stroke-width="34">
-            <path d="M-10 70 Q 100 10 210 70" stroke="#8DCDEA"/>
-            <path d="M30 210 Q 45 90 130 -10" stroke="#E31C5F"/>
-            <path d="M210 130 Q 110 150 60 215" stroke="#8DCDEA"/>
-          </g>
-          <g clip-path="url(#c)" fill="none" stroke="#000000" stroke-width="3.5">
-            <path d="M-10 88 Q 100 28 210 88"/>
-            <path d="M-10 52 Q 100 -8 210 52"/>
-            <path d="M48 210 Q 63 90 148 -10"/>
-            <path d="M12 210 Q 27 90 112 -10"/>
-            <path d="M210 148 Q 110 168 78 215"/>
-            <path d="M210 112 Q 110 132 42 215"/>
-          </g>
-          <circle cx="100" cy="100" r="96" fill="none" stroke="#000000" stroke-width="5"/>
+  <div class="hero-bg">
+    <img src="hero-jugadora.jpg" alt="Jugadora de la academia Phoenix Ace rematando durante entrenamiento de volleyball en Moravia">
+  </div>
+
+  <svg class="mini-ball" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="100" cy="100" r="96" fill="#ffffff"/>
+    <g fill="none" stroke-width="26">
+      <path d="M-10 70 Q 100 10 210 70" stroke="#8DCDEA"/>
+      <path d="M30 210 Q 45 90 130 -10" stroke="#E31C5F"/>
+    </g>
+    <circle cx="100" cy="100" r="96" fill="none" stroke="#000" stroke-width="5"/>
+  </svg>
+
+  <div class="wrap hero-in">
+    <div class="badge-shield">
+      <div class="shield">
+        <svg viewBox="0 0 100 115" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 2 L96 18 V58 C96 88 76 105 50 113 C24 105 4 88 4 58 V18 Z" fill="#000" stroke="#8DCDEA" stroke-width="2.5"/>
+          <path d="M50 10 L88 23 V57 C88 82 71 96 50 103 C29 96 12 82 12 57 V23 Z" fill="none" stroke="#E31C5F" stroke-width="1.5"/>
+          <circle cx="50" cy="52" r="20" fill="none" stroke="#fff" stroke-width="2"/>
+          <path d="M32 48 Q50 36 68 48" fill="none" stroke="#8DCDEA" stroke-width="2"/>
+          <path d="M34 60 Q50 70 66 60" fill="none" stroke="#E31C5F" stroke-width="2"/>
         </svg>
       </div>
+      <span class="badge-txt">Est. Moravia · Costa Rica</span>
+    </div>
+
+    <span class="ribbon">5.0 ★ Google · 19 reseñas</span>
+
+    <h1>Academia de <em>Volleyball</em> en Moravia</h1>
+    <p class="kicker">Donde la disciplina define la excelencia</p>
+
+    <ul class="checklist">
+      <li><span class="ck">✓</span> Categorías de Iniciación a U17</li>
+      <li><span class="ck">✓</span> Entrenamiento técnico y físico estructurado</li>
+      <li><span class="ck">✓</span> 6 días de entrenamiento por semana</li>
+      <li><span class="ck">✓</span> Ambiente familiar, disciplina de alto nivel</li>
+    </ul>
+
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/50688533555" target="_blank" rel="noopener">Coordinar clase de prueba</a>
+      <a class="btn turq" href="#horarios">Ver horarios</a>
     </div>
   </div>
 </header>
