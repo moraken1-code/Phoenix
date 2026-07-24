@@ -1,0 +1,48 @@
+PROMPT — PÁGINA WEB PHOENIX ACE
+(Para usar en cualquier herramienta de IA que genere sitios: v0.dev de Vercel, GitHub Copilot, Claude, ChatGPT, Lovable, Bolt, etc.)
+
+---
+
+Crea una página web de una sola página (one-page, un solo archivo index.html con HTML, CSS y JavaScript incluidos) para una academia de volleyball. Estilo: elegante, profesional y humano — fondo claro, mucho espacio en blanco, tipografía moderna, animaciones sutiles. NO estilo genérico de plantilla.
+
+MARCA
+- Nombre: Phoenix Ace – Academia de Volleyball
+- Colores oficiales (usar exactamente): fucsia #E31C5F, turquesa #8DCDEA, azul marino #12294a, blanco #FFFFFF
+- Elemento distintivo obligatorio: una bola de voleibol dibujada en SVG con los colores de la marca, que flote suavemente y rote lento en el hero (animación elegante, no exagerada). Respetar prefers-reduced-motion.
+
+NEGOCIO
+- Ubicación: Moravia, 600 m oeste de Romanas Ballar, gimnasio del Colegio de Contadores Públicos, San José, Costa Rica
+- Categorías: Iniciación, U13, U15, U17, Nivelación y Clínicas de sábado
+- Mensualidad: ₡20.000, pago los primeros 5 días del mes
+- Pago: SINPE Móvil 8853-3555 a nombre de Evelyn Vargas
+- WhatsApp: wa.me/50688533555 · Correo: academiavolleyball1@gmail.com
+- Instagram: @phoenix_volleyball_cr
+- Reputación: 5.0 estrellas en Google con 19 reseñas (mostrarlo como sello de confianza)
+
+SECCIONES (en este orden)
+1. Nav fijo con logo, enlaces y botón de WhatsApp
+2. Hero: titular emotivo, subtítulo, botón "Coordinar clase de prueba" (WhatsApp), sello 5.0★, y la bola SVG animada
+3. Programas: 6 tarjetas (Iniciación, U13, U15, U17, Nivelación, Clínicas) con descripción breve por edad
+4. Horarios julio-agosto con pestañas interactivas por día:
+   - Lunes: U17 4-6pm
+   - Martes: U13/Iniciación 4-6pm · U17/U15 físico 5-6pm · U15 6-7:30pm
+   - Miércoles: U13/Iniciación/Nivelación 3:45-5:30pm · U17 5-7pm
+   - Jueves: U15 4-6pm
+   - Viernes: Nivelación 3:45-5:30pm · U15 5-7pm · U17 5-7pm
+   - Sábado: U13/Iniciación/Nivelación 8-10am · Clínicas 10-12md
+5. Galería: grid de 5-6 espacios para fotos (placeholders fáciles de reemplazar por <img>)
+6. Testimonios: 3 tarjetas con espacio para pegar reseñas reales de Google
+7. Matrícula: precio ₡20.000 + instrucciones de pago SINPE
+8. Contacto: WhatsApp, correo, Instagram y dirección
+9. Footer sencillo
+10. Botón flotante de WhatsApp siempre visible
+
+REQUISITOS TÉCNICOS
+- Un solo archivo index.html, sin frameworks ni dependencias (solo Google Fonts)
+- Responsive (móvil primero — la mayoría de familias entra desde el celular)
+- SEO: title y meta description con "academia de volleyball Moravia San José"
+- Texto en español de Costa Rica, tono cercano ("escribinos", "coordiná")
+- Animaciones: aparición suave al hacer scroll, hover en tarjetas, tabs de horarios
+
+---
+FIN DEL PROMPT
